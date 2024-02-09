@@ -79,7 +79,7 @@
 <script>
 	$(".g").css('color', 'white');
 	$(".a").css('color', 'white');
-	
+	// artist -> genre
 	dict = {
 		0: ['a','b','k'],
 		1: ['a','b','g'],
@@ -90,7 +90,7 @@
 		6: ['a','h','i'],
 		7: ['a','c','d','j']
 	};
-
+	// genre -> artist
 	dict2 = {
 		a: [],
 		b: [],
@@ -114,7 +114,7 @@
 	}
 	console.log(dict2);
 
-
+	// on click on genre, find associated artist links and highlight them red
 	$(".g").click(function(event) {
 		event.preventDefault();
 		$(".g").css('color', 'white');
@@ -133,6 +133,7 @@
 		}
 	});
 
+	// on click on artist, highlight associated genre links
 	$(".a").click(function(event) {
 		event.preventDefault();
 
